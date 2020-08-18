@@ -3,7 +3,8 @@
         title="保存"
         ref="save"
         extClass="save-modal"
-        :height="200"
+        :height="130"
+        :isHaveCancel="true"
         okText="保存"
         @ok="addData"
     >
@@ -16,8 +17,7 @@ import { Input } from 'ant-design-vue';
 import HalfModal from '@components/HalfModal';
 import { TipError, TipSuccess } from '@common/tip';
 import QRCode from 'qrcode';
-const iToolBox = window.iToolBox || {};
-const DB_NAME= 'qrcode';
+import { addLocalItem } from '@common/itoolbox';
 export default {
     name: 'SaveItem', // 保存单项
     props: {
@@ -54,13 +54,11 @@ export default {
                 margin: 1,
                 width: 280,
             });
-            const res = await iToolBox.DB.addItem(DB_NAME, {
+            const flag = await addLocalItem({
                 name: this.name,
                 url,
             });
-            if (res.success) {
-                TipSuccess('保存成功！');
-            }
+            TipSuccess(flag ? '保存成功！' : '保存失败！');
             this.$emit('refreshList');
         },
     },

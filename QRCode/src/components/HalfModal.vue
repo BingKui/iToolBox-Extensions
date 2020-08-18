@@ -10,7 +10,7 @@
         :drawerStyle="{backgroundColor: '#EAEBEC'}"
         @close="close"
     >
-        <div class="half-modal-content" :style="{height: `${height}`}">
+        <div class="half-modal-content" :style="halfContentStyle">
             <slot></slot>
         </div>
         <div class="half-modal-bottom">
@@ -79,6 +79,14 @@ export default {
             visible: false,
         };
     },
+    computed: {
+        halfContentStyle() {
+            const { height } = this.$props;
+            return {
+                height: `${height - 70}px`,
+            };
+        },
+    },
     methods: {
         open() {
             this.visible = true;
@@ -115,12 +123,25 @@ export default {
         border-top-right-radius: @gap-md;
     }
     .ant-drawer-body {
+        .p(0);
+    }
+    .half-modal-content {
         .p(@gap-md);
     }
-    .btn-list {
-        .flex-row-center();
-        .btn-item {
-            flex: 1;
+    .margin-left {
+        margin-left: @gap-md;
+    }
+    .half-modal-bottom {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        .p-h(@gap-md);
+        .btn-list {
+            width: 100%;
+            .flex-row-center();
+            .btn-item {
+                flex: 1;
+            }
         }
     }
 }

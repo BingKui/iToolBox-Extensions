@@ -2,7 +2,6 @@
     <div class="v-index-page">
         <div class="create-qrcode">
             <Input v-model="qrcodeValue" type="textarea" :disabled="isCreate" :rows="6" placeholder="输入要生成的文本、网址" />
-            <!-- <Divider size="small" orientation="left">二维码</Divider> -->
             <div class="qrcode-value">
                 <canvas id="qrcode"></canvas>
                 <img v-if="!isCreate" class="logo-img" :src="logo" alt="">
@@ -13,37 +12,25 @@
             <Button type="primary" @click="recreateQrcode">重新生成</Button>
             <Button type="primary" @click="saveQrcode">保存</Button>
         </template>
-        <Divider orientation="left">本地二维码</Divider>
-        <!-- <Button type="primary" @click="openModal">保存二维码</Button>
         <template v-if="qrcodeList.length > 0">
-            <Row class="local-qrcode-list" gutter="10">
-                <Col :span="8" class="qrcode-item" v-for="item in qrcodeList" :key="item._id">
-                    <img class="item-img" :src="item.url" />
-                    <div class="item-name">{{item.name}}</div>
-                    <div class="item-del">
-                        <Button type="success" @click="() => openDetailModal(item.url, item.name)">大图</Button>
-                        <Button type="error" @click="() => delQrcodeItem(item._id)">删除</Button>
-                    </div>
+            <Divider orientation="left">本地二维码</Divider>
+            <Row :gutter="10">
+                <Col v-for="(item, index) in qrcodeList" :span="8" :key="index">
+                    <LocalItem :itemInfo="item" @refreshList="getHistoryList" />
                 </Col>
             </Row>
-        </template> -->
-        <!-- <Modal v-model="addModal" title="保存二维码" ok-text="保存" @ok="addQrcodeItem">
-            <Input v-model="qrcodeName" autofocus placeholder="输入二维码名字" :maxlength="10" @on-enter="addQrcodeItem" />
-        </Modal>
-        <Modal v-model="detailModal" class-name="detail-modal" :footer-hide="true" :width="480">
-            <img class="detail-img" :src="detailValue" />
-            <div class="detail-name">{{detailName}}</div>
-        </Modal> -->
+        </template>
         <SaveItem ref="save" :codeValue="qrcodeValue" @refreshList="getHistoryList" />
     </div>
 </template>
 
 <script>
-import { Button, Divider, Icon, Input, Modal } from 'ant-design-vue';
+import { Button, Divider, Icon, Input, Modal, List, Row, Col } from 'ant-design-vue';
 import { TipError, TipSuccess } from '@common/tip';
 import QRCode from 'qrcode';
 import LOGO from '@assets/logo.png';
 import SaveItem from './SaveItem';
+import LocalItem from './LocalItem';
 
 const iToolBox = window.iToolBox || {};
 const DB_NAME= 'qrcode';
@@ -56,6 +43,9 @@ export default {
         Input,
         Modal,
         SaveItem,
+        LocalItem,
+        Row,
+        Col,
     },
     data() {
         return {
@@ -63,16 +53,12 @@ export default {
             qrcodeValue: '',
             isCreate: false,
             qrcodeList: [],
-            // addModal: false,
-            // qrcodeName: '',
-            // detailModal: false,
-            // detailValue: '',
-            // detailName: '',
         };
     },
-    mounted() {
-        this.qrcodeValue && this.createQrcode();
-        this.getHistoryList();
+    created() {
+        setTimeout(async () => {
+            await this.getHistoryList();
+        }, 1000);
     },
     methods: {
         createQrcode() {
@@ -104,9 +90,6 @@ export default {
         saveQrcode() {
             this.$refs.save.open();
         },
-        openModal() {
-            this.addModal = true;
-        },
         async getHistoryList() {
             const res = await iToolBox.DB.getAllItems(DB_NAME);
             console.log('获取的结果：', res);
@@ -130,15 +113,6 @@ export default {
             this.addModal = false;
             this.qrcodeName = '';
             await this.getHistoryList();
-        },
-        async delQrcodeItem(id) {
-            await iToolBox.DB.delItem(DB_NAME, id);
-            await this.getHistoryList();
-        },
-        openDetailModal(val, name) {
-            this.detailValue = val;
-            this.detailName = name;
-            this.detailModal = true;
         },
     },
 };
