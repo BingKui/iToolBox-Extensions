@@ -19,9 +19,7 @@
   },
   "scripts": {
     "dev": "cross-env ENV=dev webpack-dev-server --config ./build/webpack.dev.js --hot --port 9999",
-    "build": "cross-env ENV=prod webpack --config ./build/webpack.prod.js",
-    "pack": "node ./build/pack.js",
-    "zip": "npm run build && npm run pack"
+    "build": "cross-env ENV=prod webpack --config ./build/webpack.prod.js"
   },
   "dependencies": {
     "ant-design-vue": "^1.6.4",
