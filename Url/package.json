@@ -1,6 +1,6 @@
 {
 	"name": "Url",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "URL 处理扩展。",
 	"main": "index.js",
 	"author": "康兵奎",
@@ -9,7 +9,7 @@
 	"extInfo": {
 		"description": "URL 处理扩展。",
 		"name": "Url",
-		"version": "1.0.0",
+		"version": "1.0.1",
 		"author": "康兵奎",
 		"rarName": "urlhandle",
 		"index": "index.html",
