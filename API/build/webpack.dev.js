@@ -21,7 +21,7 @@ module.exports = webpackMerge(webpackBase, {
             errors: true,
             warnings: true,
         },
-        open: true, // 服务启动后 打开浏览器
+        open: false, // 服务启动后 打开浏览器
         proxy: { // 本地接口代理转发
             // '/api/sh/v1': {
             //     target: 'http://10.0.244.37:8080',//目标接口域名

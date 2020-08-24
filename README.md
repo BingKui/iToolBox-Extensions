@@ -21,3 +21,4 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] GitHub：GitHub用户查询，仓库查询
 - [ ] JSON：json格式化
 - [ ] QiniuCDN：七牛cdn上传文件
+- [ ] Icon：png、jpg、gif 转换成 icns、ico @fiahfy/icns

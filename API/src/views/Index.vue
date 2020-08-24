@@ -13,13 +13,15 @@
         <div v-if="apiVersion" class="api-version">Api Version: v{{apiVersion}}</div>
         <Divider orientation="left">数据库操作</Divider>
         <DBTest />
+        <AppManage />
     </div>
 </template>
 
 <script>
 import { Button, Divider, Icon } from 'ant-design-vue';
 import DBTest from './components/DBTest';
-const iTools = window.iTools;
+import AppManage from './components/AppManage';
+const iToolBox = window.iToolBox;
 export default {
     name: 'Index',
     components: {
@@ -27,6 +29,7 @@ export default {
         Divider,
         Icon,
         DBTest,
+        AppManage,
     },
     data() {
         return {
@@ -35,10 +38,10 @@ export default {
     },
     methods: {
         apiVerAction() {
-            this.apiVersion = iTools.version;
+            this.apiVersion = iToolBox.version;
         },
         async apiNotice() {
-            await iTools.sysNotice('API 测试', '这个是提示的内容~~~~~');
+            await iToolBox.sysNotice('API 测试', '这个是提示的内容~~~~~');
         },
     },
 };
