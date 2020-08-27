@@ -9,7 +9,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [x] QRCode：二维码扩展
 - [x] Img：图片转base64扩展
 - [ ] JS PlayGround：JavaScript 运行平台
-- [ ] Regular：正则表达式查询扩展
+- [x] Regular：正则表达式查询扩展
 - [ ] Color：颜色转换，主题色生成
 - [ ] Scale：进制转换
 - [ ] NPM：npm 仓库搜索，仓库推荐
