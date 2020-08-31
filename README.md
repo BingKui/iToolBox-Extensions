@@ -23,3 +23,4 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] QiniuCDN：七牛cdn上传文件
 - [ ] Icon：png、jpg、gif 转换成 icns、ico @fiahfy/icns
 - [ ] CodePart：代码片段，保存代码
+- [ ] fanyi：翻译软件
