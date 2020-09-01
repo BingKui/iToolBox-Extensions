@@ -29,4 +29,4 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] Unsplash：Unsplash图片搜索
 - [ ] ipInfo：ip地址信息查询
 - [ ] flutter：flutter 插件搜索
-- [ ] DataSecurity: 数据安全
+- [x] DataSecurity: 数据安全
