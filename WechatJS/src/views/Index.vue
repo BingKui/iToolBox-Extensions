@@ -8,26 +8,28 @@
             <div class="rule-item">3.接下来对 string1 作 sha1 加密，字段名和字段值都采用原始值，<span class="text-bold">不进行URL 转义</span>。即 signature=sha1(string1)。</div>
         </div>
         <Divider size="small" orientation="left">生成签名</Divider>
-        <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
-            <div class="js-param">
-                <FormItem prop="ticket" label="jsapi_ticket">
-                    <Input v-model="formValidate.ticket" clearable placeholder="jsapi_ticket" />
+        <div class="form-container">
+            <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
+                <div class="js-param">
+                    <FormItem prop="ticket" label="jsapi_ticket">
+                        <Input v-model="formValidate.ticket" clearable placeholder="jsapi_ticket" />
+                    </FormItem>
+                    <FormItem prop="noncestr" label="noncestr">
+                        <Input v-model="formValidate.noncestr" clearable placeholder="noncestr" />
+                    </FormItem>
+                    <FormItem prop="timestamp" label="timestamp">
+                        <Input v-model="formValidate.timestamp" clearable placeholder="timestamp" />
+                    </FormItem>
+                    <FormItem prop="url" label="url">
+                        <Input v-model="formValidate.url" clearable placeholder="url" />
+                    </FormItem>
+                </div>
+                <FormItem class="v-btn-list">
+                    <Button type="primary" @click="handleSubmit('formValidate')">生成签名</Button>
+                    <Button type="error" @click="handleReset('formValidate')">清空</Button>
                 </FormItem>
-                <FormItem prop="noncestr" label="noncestr">
-                    <Input v-model="formValidate.noncestr" clearable placeholder="noncestr" />
-                </FormItem>
-                <FormItem prop="timestamp" label="timestamp">
-                    <Input v-model="formValidate.timestamp" clearable placeholder="timestamp" />
-                </FormItem>
-                <FormItem prop="url" label="url">
-                    <Input v-model="formValidate.url" clearable placeholder="url" />
-                </FormItem>
-            </div>
-            <FormItem class="v-btn-list">
-                <Button type="primary" @click="handleSubmit('formValidate')">生成签名</Button>
-                <Button type="error" @click="handleReset('formValidate')">清空</Button>
-            </FormItem>
-        </Form>
+            </Form>
+        </div>
         <Divider v-if="signatureString" size="small" orientation="left">签名字符串</Divider>
         <div class="js-signature-string">{{signatureString}}</div>
         <Divider v-if="signature" size="small" orientation="left">签名(signature)</Divider>
@@ -105,6 +107,9 @@ export default {
             display: block;
             .font-size-sm();
         }
+    }
+    .form-container {
+        width: 70%;
     }
     .js-param {
         .m-b(@gap-md);
