@@ -7,6 +7,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [x] API：能力API DEMO
 - [x] Url：url操作扩展
 - [x] QRCode：二维码扩展
+- [ ] QrcodeRead： 读取二维码内容
 - [x] Img：图片转base64扩展
 - [ ] JS PlayGround：JavaScript 运行平台
 - [x] Regular：正则表达式查询扩展
@@ -24,3 +25,8 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] Icon：png、jpg、gif 转换成 icns、ico @fiahfy/icns
 - [ ] CodePart：代码片段，保存代码
 - [ ] fanyi：翻译软件
+- [ ] ExpressQuery：快递查询
+- [ ] Unsplash：Unsplash图片搜索
+- [ ] ipInfo：ip地址信息查询
+- [ ] flutter：flutter 插件搜索
+- [ ] DataSecurity: 数据安全
