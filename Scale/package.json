@@ -14,8 +14,8 @@
 		"rarName": "scale",
 		"index": "index.html",
 		"logo": "./src/assets/logo.png",
-		"width": 700,
-		"height": 700
+		"width": 320,
+		"height": 300
 	},
 	"scripts": {
 		"dev": "cross-env ENV=dev webpack-dev-server --config ./build/webpack.dev.js --hot --port 9999",

@@ -1,13 +1,12 @@
 <template>
     <div class="v-scale">
-        <Divider size="small" orientation="left">进制转换</Divider>
         <Row class="scale-type">
             <Col span="10">
                 <Select v-model="firstType">
                     <Option v-for="item in typeList" :value="item.value" :key="item.value">{{ item.text }}</Option>
                 </Select>
             </Col>
-            <Col span="4" class="type-tip">转换为</Col>
+            <Col span="4" class="type-tip">转换</Col>
             <Col span="10">
                 <Select v-model="secondType">
                     <template v-for="item in typeList">
@@ -16,9 +15,11 @@
                 </Select>
             </Col>
         </Row>
-        <Input v-model="normalValue" placeholder="原始值" @on-change="binaryChange" @on-keydown="binaryKeyDown"></Input>
-        <Divider size="small" orientation="left">结果</Divider>
-        <div class="scale-result">{{resultValue}}</div>
+        <Input v-model="normalValue" type="textarea" placeholder="原始值" @on-change="binaryChange" @on-keydown="binaryKeyDown"></Input>
+        <template v-if="resultValue">
+            <Divider size="small" orientation="left">结果</Divider>
+            <div class="scale-result">{{resultValue}}</div>
+        </template>
     </div>
 </template>
 
@@ -88,6 +89,8 @@ export default {
                         break;
                     }
                 }
+            } else {
+                this.resultValue = '';
             }
         },
     },
@@ -96,6 +99,7 @@ export default {
 
 <style lang="less">
 .v-scale {
+    .p(@gap-md);
     .scale-type {
         .m-b(@gap-md);
         .type-tip {
@@ -104,6 +108,9 @@ export default {
             height: 32px;
         }
     }
+}
+@media (prefers-color-scheme: dark) {
+    .v-scale {}
 }
 </style>
 
