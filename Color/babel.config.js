@@ -17,8 +17,9 @@ const plugins = [
     [
         'import',
         {
-            libraryName: 'view-design',
-            libraryDirectory: 'src/components',
+            libraryName: 'ant-design-vue',
+            libraryDirectory: 'es',
+            style: true
         }
     ]
 ];

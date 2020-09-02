@@ -3,9 +3,9 @@
         <Divider size="small" orientation="left">RGB 转 16进制</Divider>
         <div class="v-color-rgb-hex">
             <div class="v-color-convert">
-                <Input class="v-color-rgb-item" v-model="rValue" placeholder="0~255" maxlength="3" />
-                <Input class="v-color-rgb-item" v-model="gValue" placeholder="0~255" maxlength="3" />
-                <Input class="v-color-rgb-item" v-model="bValue" placeholder="0~255" maxlength="3" />
+                <Input class="v-color-rgb-item" v-model="rValue" placeholder="0~255" :maxlength="3" />
+                <Input class="v-color-rgb-item" v-model="gValue" placeholder="0~255" :maxlength="3" />
+                <Input class="v-color-rgb-item" v-model="bValue" placeholder="0~255" :maxlength="3" />
                 <Button type="primary" @click="convertRgbToHex">转换</Button>
             </div>
             <div class="v-color-convert-result">
@@ -19,7 +19,7 @@
         <Divider size="small" orientation="left">16进制 转 RGB</Divider>
         <div class="v-color-rgb-hex">
             <div class="v-color-convert">
-                <Input class="v-color-hex-item" v-model="hexValue" placeholder="例如：#44abe5、44abe5" maxlength="7" />
+                <Input class="v-color-hex-item" v-model="hexValue" placeholder="例如：#44abe5、44abe5" :maxlength="7" />
                 <Button type="primary" @click="convertHexToRgb">转换</Button>
             </div>
             <div class="v-color-convert-result">
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { Divider, Input, Button, Card, Icon, Row, Col } from 'view-design';
+import { Divider, Input, Button, Card, Row, Col } from 'ant-design-vue';
 // import ColorHistoryItem from './components/ColorHistoryItem';
 import { rgbToHex, hexToRgb } from '@common/transform';
 import { addItem, getAllItems, copyText } from '@common/itoolbox';
@@ -56,7 +56,6 @@ export default {
         Input,
         Button,
         Card,
-        Icon,
         Row,
         Col,
         // ColorHistoryItem,
@@ -74,11 +73,11 @@ export default {
     },
     computed: {
         rgbColorBlock() {
-            const bg = this.rgbToHexValue || '#eee';
+            const bg = this.rgbToHexValue || '#ccc';
             return `background: ${bg};`;
         },
         hexColorBlock() {
-            const bg = this.hexToRgbValue || '#eee';
+            const bg = this.hexToRgbValue || '#ccc';
             return `background: ${bg};`;
         },
     },

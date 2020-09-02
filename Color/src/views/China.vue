@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { Input, Row, Col } from 'view-design';
+import { Input, Row, Col } from 'ant-design-vue';
 import ScrollBar from '@components/ScrollBar';
 import ColorItem from './components/ColorItem';
 import { CHINA_COLOR_LIST } from '@constants/china';

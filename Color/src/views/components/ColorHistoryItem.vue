@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { Card, Button } from 'view-design';
+import { Card, Button } from 'ant-design-vue';
 import { copyText, delItem } from '@common/itoolbox';
 import DB_NAME from '@constants/db';
 export default {

@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { Row, Col } from 'view-design';
+import { Row, Col } from 'ant-design-vue';
 import ScrollBar from '@components/ScrollBar';
 import ColorItem from './components/ColorItem';
 import { LIBTHEME_LIST } from '@constants/libtheme';

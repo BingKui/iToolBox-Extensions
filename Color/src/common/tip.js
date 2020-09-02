@@ -1,32 +1,41 @@
-import { Message, Notice } from 'view-design';
+import { Message } from 'ant-design-vue';
 
-Message.config({
-    top: 25,
-    duration: 3
-});
-
-export const TipSuccess = (text='成功') => {
-    Message.success(text);
+/**
+ * 提示
+ * @param {String} text 提示信息
+ */
+export const Tip = (text) => {
+    Message.info(text, 2, () => {});
 };
 
-export const TipError = (text='错误') => {
-    Message.error(text);
+/**
+ * 成功提示
+ * @param {String} text 提示信息
+ */
+export const TipSuccess = (text) => {
+    Message.success(text, 2, () => {});
 };
 
-export const TipWarning = (text='警告') => {
-    Message.warning(text);
+/**
+ * 错误提示
+ * @param {String} text 提示信息
+ */
+export const TipError = (text) => {
+    Message.error(text, 2, () => {});
 };
 
-export const TipLoading = (text='加载中...', duration = 3) => {
-    Message.loading({
-        content: text,
-        duration,
-    });
+/**
+ * 警告提示
+ * @param {String} text 提示信息
+ */
+export const TipWarning = (text) => {
+    Message.warning(text, 2, () => {});
 };
 
-export const NoticeNormal = (title, desc) => {
-    Notice.open({
-        title,
-        desc,
-    });
+/**
+ * 加载
+ * @param {String} text 提示信息
+ */
+export const TipLoading = (text) => {
+    Message.loading(text, 2, () => {});
 };

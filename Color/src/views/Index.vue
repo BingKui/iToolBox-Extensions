@@ -1,13 +1,13 @@
 <template>
     <div class="v-index-page">
-        <Tabs value="transform">
-            <TabPane label="颜色转换" name="transform">
+        <Tabs default-active-key="transform">
+            <TabPane tab="颜色转换" key="transform">
                 <Transform />
             </TabPane>
-            <TabPane label="UI库颜色" name="libtheme">
+            <TabPane tab="UI库颜色" key="libtheme">
                 <LibTheme />
             </TabPane>
-            <TabPane label="中国色" name="china">
+            <TabPane tab="中国色" key="china">
                 <China />
             </TabPane>
             <!-- <TabPane label="主题色生成" name="theme">主题色生成</TabPane> -->
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { Tabs, TabPane } from 'view-design';
+import { Tabs, TabPane } from 'ant-design-vue';
 import Transform from './Transform';
 import LibTheme from './LibTheme';
 import China from './China';
@@ -25,7 +25,7 @@ export default {
     name: 'Index',
     components: {
         Tabs,
-        TabPane,
+        TabPane: Tabs.TabPane,
         Transform,
         LibTheme,
         China,
