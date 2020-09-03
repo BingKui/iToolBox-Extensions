@@ -1,7 +1,7 @@
 <template>
     <div class="v-china-color">
-        <Input class="margin-bottom" placeholder="输入颜色名称、色值" v-model="inputVal" />
-        <ScrollBar class="china-color-list">
+        <Input placeholder="输入颜色名称、色值" v-model="inputVal" />
+        <ScrollBar class="margin-top china-color-list">
             <Row :gutter="15">
                 <Col :span="8" v-for="(item, index) in (searchList.length > 0 ? searchList : colorList)" :key="index">
                     <ColorItem :name="item.name" :value="item.value" />
@@ -33,7 +33,8 @@ export default {
     },
     computed: {
         searchList() {
-            return CHINA_COLOR_LIST.filter(item => item.name.indexOf(this.inputVal) > -1 || item.value.indexOf(this.inputVal) > -1);
+            const _val = this.inputVal.toLocaleUpperCase();
+            return CHINA_COLOR_LIST.filter(item => item.name.indexOf(_val) > -1 || item.value.indexOf(_val) > -1);
         },
     },
 };
@@ -41,7 +42,7 @@ export default {
 
 <style lang="less" scoped>
 .v-china-color {
-    height: calc(100vh - 82px);
+    height: calc(100vh - 92px);
     .china-color-list {
         height: calc(100% - 40px);
     }

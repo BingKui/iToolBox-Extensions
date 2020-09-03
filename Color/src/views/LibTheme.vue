@@ -62,7 +62,7 @@ export default {
 
 <style lang="less" scoped>
 .v-lib-theme {
-    height: calc(100vh - 82px);
+    height: calc(100vh - 92px);
     .lib-theme-container {
         height: 100%;
     }

@@ -115,6 +115,7 @@ export default {
 
 <style lang="less" scoped>
 .v-transform {
+    height: calc(100vh - 92px);
     .v-color-rgb-hex {
         .m-b(@gap);
         .v-color-convert {
