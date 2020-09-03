@@ -10,7 +10,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] QrcodeRead： 读取二维码内容
 - [x] Img：图片转base64扩展
 - [ ] JS PlayGround：JavaScript 运行平台
-- [x] Regular：正则表达式查询扩展
+- [x] Regular：正则表达式查询扩展-add:支持校验能力
 - [x] Color：颜色转换，主题色生成
 - [x] Scale：进制转换
 - [ ] NPM：npm 仓库搜索，仓库推荐
@@ -30,3 +30,11 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] ipInfo：ip地址信息查询
 - [ ] flutter：flutter 插件搜索
 - [x] DataSecurity: 数据安全
+- [ ] Password: 随机密码生成
+- [ ] Time: 时间戳转换工具
+- [ ] MarkDown：Markdown工具，编写、预览、保存，支持html转Markdown
+- [ ] BianMa：编码转换
+- [ ] CodeBeautify：代码美化工具
+- [ ] ExcelToJson：Excel转JSON文件
+- [ ] HTTPCode：http状态码解释
+- [ ] RetainKeyword：保留关键字
