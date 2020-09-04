@@ -17,7 +17,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] TextCompare：文本比较
 - [ ] PinYin：文字转拼音，文字加拼音
 - [x] WechatJS：微信JS签名生成校验工具
-- [ ] WechatCard：微信卡劵签名生成校验工具
+- [x] WechatCard：微信卡劵签名生成校验工具
 - [ ] CodeTerser：代码压缩
 - [ ] GitHub：GitHub用户查询，仓库查询
 - [ ] JSON：json格式化
