@@ -37,4 +37,4 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] CodeBeautify：代码美化工具
 - [ ] ExcelToJson：Excel转JSON文件
 - [ ] HTTPCode：http状态码解释
-- [ ] RetainKeyword：保留关键字
+- [x] RetainKeyword：FE保留关键字
