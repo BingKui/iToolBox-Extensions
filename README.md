@@ -14,7 +14,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [x] Color：颜色转换，主题色生成
 - [x] Scale：进制转换
 - [ ] NPM：npm 仓库搜索，仓库推荐
-- [ ] TextCompare：文本比较
+- [x] TextCompare：文本比较
 - [ ] PinYin：文字转拼音，文字加拼音
 - [x] WechatJS：微信JS签名生成校验工具
 - [x] WechatCard：微信卡劵签名生成校验工具
