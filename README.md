@@ -30,7 +30,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] ipInfo：ip地址信息查询
 - [ ] flutter：flutter 插件搜索
 - [x] DataSecurity: 数据安全
-- [ ] Password: 随机密码生成
+- [x] Password: 随机密码生成
 - [ ] Time: 时间戳转换工具
 - [ ] MarkDown：Markdown工具，编写、预览、保存，支持html转Markdown
 - [ ] BianMa：编码转换
