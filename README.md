@@ -13,7 +13,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [x] Regular：正则表达式查询扩展-add:支持校验能力
 - [x] Color：颜色转换，主题色生成
 - [x] Scale：进制转换
-- [ ] NPM：npm 仓库搜索，仓库推荐
+- [x] NPM：npm 仓库搜索，仓库推荐
 - [x] TextCompare：文本比较
 - [ ] PinYin：文字转拼音，文字加拼音
 - [x] WechatJS：微信JS签名生成校验工具
