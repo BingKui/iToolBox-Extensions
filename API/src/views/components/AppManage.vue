@@ -3,7 +3,7 @@
         <Button @click="getAppListData">获取APP列表</Button>
         <Button @click="updateAppListData">更新app数据</Button>
         <Row :gutter="15">
-            <Col :span="12" v-for="(item, index) in applist" :key="index">
+            <Col :span="8" v-for="(item, index) in applist" :key="index">
                 <Card class="app-item">
                     <img class="app-icon" :src="item.icon" />
                     <div class="app-name">{{item.displayName || item.name}}</div>

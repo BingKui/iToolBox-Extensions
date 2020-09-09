@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Divider orientation="left">提醒类</Divider>
         <Button @click="notice">系统提醒</Button>
         <Button @click="noticeUrl">系统提醒，带链接</Button>
         <Button @click="beep">系统提醒</Button>

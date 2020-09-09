@@ -46,3 +46,53 @@ export const apiGetDisplay = (x, y) => {
 export const apiGetDisplayRect = (x, y, width, height) => {
     return iToolBox.getDisplay({x, y, width, height});
 };
+
+export const apiOpenUrl = (url) => {
+    return iToolBox.openUrlInBrowser(url);
+};
+export const apiOpenFile = (filePath) => {
+    return iToolBox.openFile(filePath);
+};
+export const apiOpenFolder = (folderPath) => {
+    return iToolBox.openFolder(folderPath);
+};
+export const apiShowFileInManage = (filePath) => {
+    return iToolBox.showFileInManage(filePath);
+};
+
+export const apiSelectFile = () => {
+    return iToolBox.selectFile();
+};
+export const apiSelectFolder = () => {
+    return iToolBox.selectFolder();
+};
+
+export const apiCopyText = (text) => {
+    return iToolBox.copyText(text);
+};
+export const apiCopyFileContent = (filePath) => {
+    return iToolBox.copyFileContent(filePath);
+};
+export const apiCopyImage = (filePath) => {
+    return iToolBox.copyImage(filePath);
+};
+
+export const apiGetFolderContent = (folderPath) => {
+    return iToolBox.getFolderContentList(folderPath);
+};
+export const apiGetFileContent = (filePath) => {
+    return iToolBox.getFileContent(filePath);
+};
+export const apiDeleteFile = (filePath) => {
+    return iToolBox.deleteFile(filePath);
+};
+export const apiTrashFile = (filePath) => {
+    return iToolBox.trashFile(filePath);
+};
+export const apiDeleteFolder = (folderPath) => {
+    return iToolBox.deleteFolder(folderPath);
+};
+export const apiTrashFolder = (folderPath) => {
+    return iToolBox.trashFolder(folderPath);
+};
+

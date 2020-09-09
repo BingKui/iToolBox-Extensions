@@ -14,6 +14,18 @@
             <CollapsePanel key="screen" header="屏幕类">
                 <Screen />
             </CollapsePanel>
+            <CollapsePanel key="open" header="打开类操作">
+                <Open />
+            </CollapsePanel>
+            <CollapsePanel key="select" header="选择类">
+                <Select />
+            </CollapsePanel>
+            <CollapsePanel key="copyandpaste" header="复制粘贴类">
+                <CopyAndPaste />
+            </CollapsePanel>
+            <CollapsePanel key="folderandfile" header="文件&文件夹">
+                <FolderAndFile />
+            </CollapsePanel>
             <CollapsePanel key="db" header="本地数据库">
                 <DBTest />
             </CollapsePanel>
@@ -29,6 +41,10 @@ import { Button, Divider, Icon, Collapse } from 'ant-design-vue';
 import Notice from './components/Notice';
 import System from './components/System';
 import Screen from './components/Screen';
+import Open from './components/Open';
+import Select from './components/Select';
+import CopyAndPaste from './components/CopyAndPaste';
+import FolderAndFile from './components/FolderAndFile';
 import DBTest from './components/DBTest';
 import AppManage from './components/AppManage';
 const iToolBox = window.iToolBox;
@@ -43,6 +59,10 @@ export default {
         Notice,
         System,
         Screen,
+        Open,
+        Select,
+        CopyAndPaste,
+        FolderAndFile,
         DBTest,
         AppManage,
     },

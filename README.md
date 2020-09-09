@@ -38,3 +38,4 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] ExcelToJson：Excel转JSON文件
 - [ ] HTTPCode：http状态码解释
 - [x] RetainKeyword：FE保留关键字
+- [ ] Abbreviation: 简称，各种英文缩写等。
