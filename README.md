@@ -24,7 +24,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] QiniuCDN：七牛cdn上传文件
 - [ ] Icon：png、jpg、gif 转换成 icns、ico @fiahfy/icns
 - [ ] CodePart：代码片段，保存代码
-- [ ] fanyi：翻译软件
+- [x] Translate：翻译软件
 - [ ] ExpressQuery：快递查询
 - [ ] Unsplash：Unsplash图片搜索
 - [ ] ipInfo：ip地址信息查询
@@ -39,3 +39,4 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] HTTPCode：http状态码解释
 - [x] RetainKeyword：FE保留关键字
 - [ ] Abbreviation: 简称，各种英文缩写等。
+- [ ] MiniCode: 生成小程序码
