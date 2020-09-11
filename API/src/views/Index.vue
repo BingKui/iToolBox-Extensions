@@ -8,6 +8,9 @@
             <CollapsePanel key="notice" header="提醒类">
                 <Notice />
             </CollapsePanel>
+            <CollapsePanel key="run" header="执行类">
+                <Run />
+            </CollapsePanel>
             <CollapsePanel key="sys" header="系统类">
                 <System />
             </CollapsePanel>
@@ -40,6 +43,7 @@
 import { Button, Divider, Icon, Collapse } from 'ant-design-vue';
 import Notice from './components/Notice';
 import System from './components/System';
+import Run from './components/Run';
 import Screen from './components/Screen';
 import Open from './components/Open';
 import Select from './components/Select';
@@ -58,6 +62,7 @@ export default {
         CollapsePanel: Collapse.Panel,
         Notice,
         System,
+        Run,
         Screen,
         Open,
         Select,

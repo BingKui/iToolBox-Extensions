@@ -8,6 +8,12 @@ export const apiNotice = async (title, content, url='') => {
 export const apiBeep = async () => {
     await iToolBox.beep();
 };
+export const apiCommand = async (line) => {
+    return await iToolBox.command(line);
+};
+export const apiRequest = async ({url, param, method, headers}) => {
+    return await iToolBox.request({url, param, method, headers});
+};
 
 export const apiGetSysInfo = () => {
     return iToolBox.getSystemInfo();
