@@ -1,6 +1,6 @@
 {
   "name": "JsonView",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON格式化工具。",
   "main": "index.js",
   "author": "康兵奎",
@@ -9,7 +9,7 @@
   "extInfo": {
     "description": "JSON格式化工具。",
     "name": "JsonView",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "康兵奎",
     "rarName": "json-view",
     "index": "index.html",
