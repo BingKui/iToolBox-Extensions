@@ -24,7 +24,7 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] QiniuCDN：七牛cdn上传文件
 - [ ] Icon：png、jpg、gif 转换成 icns、ico @fiahfy/icns
 - [ ] CodePart：代码片段，保存代码
-- [x] Translate：翻译软件
+- [x] Translate：翻译
 - [ ] ExpressQuery：快递查询
 - [ ] Unsplash：Unsplash图片搜索
 - [ ] ipInfo：ip地址信息查询
@@ -39,6 +39,6 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] HTTPCode：http状态码解释
 - [x] RetainKeyword：FE保留关键字
 - [ ] Abbreviation: 简称，各种英文缩写等。
-- [ ] MiniCode: 生成小程序码
+- [x] MiniCode: 生成小程序码
 - [ ] NodeModules: 本地 node_modules 文件夹管理
 - [ ] ProjectManage: 前端项目管理
