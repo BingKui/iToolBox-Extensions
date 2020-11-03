@@ -42,3 +42,4 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [x] MiniCode: 生成小程序码
 - [ ] NodeModules: 本地 node_modules 文件夹管理
 - [ ] ProjectManage: 前端项目管理
+- [ ] iVideo: 视频播放器
