@@ -28,7 +28,8 @@ iToolBox 扩展仓库，所有的扩展都在这里边。
 - [ ] ExpressQuery：快递查询
 - [ ] Unsplash：Unsplash图片搜索
 - [ ] ipInfo：ip地址信息查询
-- [ ] flutter：flutter 插件搜索
+- [ ] Pub.dev：flutter 插件搜索
+- [ ] FlutterIcon：flutter 自定义icon生成
 - [x] DataSecurity: 数据安全
 - [x] Password: 随机密码生成
 - [ ] Time: 时间戳转换工具
