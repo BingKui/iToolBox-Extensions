@@ -5,7 +5,7 @@
                 <Input v-model="appid" placeholder="小程序appid" />
             </ParamItem>
             <ParamItem label="Secret">
-                <Input v-model="secret" placeholder="小程序appid" />
+                <Input v-model="secret" placeholder="小程序secret" />
             </ParamItem>
             <ParamItem label="Path">
                 <Input v-model="path" placeholder="页面路径，pages/index/index" />
@@ -39,10 +39,10 @@ export default {
     },
     data() {
         return {
-            appid: 'wx943aa5702a72d768',
-            secret: '2d556a3b13db9cefb657642be25ca51c',
+            appid: '',
+            secret: '',
             path: '',
-            params: 'code=1111',
+            params: '',
             imgSrc: '',
             buffer: '',
         };

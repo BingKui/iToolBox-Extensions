@@ -1,20 +1,20 @@
 {
-	"name": "MiniCode",
+	"name": "AudioBooks",
 	"version": "1.0.0",
-	"description": "生成小程序码",
+	"description": "有声读物，收录读物信息。",
 	"main": "index.js",
 	"author": "康兵奎",
 	"license": "MIT",
 	"private": false,
 	"extInfo": {
-		"name": "小程序码",
-		"description": "生成小程序码(微信平台).",
+		"description": "有声读物，收录读物信息。",
+		"name": "AudioBooks",
 		"version": "1.0.0",
 		"author": "康兵奎",
-		"rarName": "minicode",
+		"rarName": "有声读物。",
 		"index": "index.html",
 		"logo": "./src/assets/logo.png",
-		"width": "500",
+		"width": 400,
 		"height": 700
 	},
 	"scripts": {
