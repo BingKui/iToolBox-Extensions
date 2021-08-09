@@ -27,7 +27,7 @@
 
 <script>
 import { Button, Divider, Icon, Input, message, Card, List } from 'ant-design-vue';
-const DB = window.iToolBox.DB;
+const DB = window.iToolBox ? window.iToolBox.DB : {};
 const DB_NAME = 'api-db';
 export default {
     name: 'DBTest',
