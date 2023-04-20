@@ -20,7 +20,7 @@ const dealIconName = (name) => {
     for (let i = 0; i < arr.length; i++) {
         result += firstToUpper(arr[i]);
     }
-    return result;
+    return result.toLocaleLowerCase();
 };
 
 const firstToUpper = (str) => {
