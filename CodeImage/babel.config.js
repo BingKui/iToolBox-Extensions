@@ -8,6 +8,7 @@ const presets = [
                 chrome: '67',
                 safari: '11.1',
             },
+            useBuiltIns: 'usage',
         },
     ],
 ];
@@ -16,9 +17,8 @@ const plugins = [
     [
         'import',
         {
-            libraryName: 'ant-design-vue',
-            libraryDirectory: 'es',
-            style: true
+            libraryName: 'view-design',
+            libraryDirectory: 'src/components',
         }
     ]
 ];

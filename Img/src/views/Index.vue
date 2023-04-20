@@ -7,6 +7,9 @@
             <TabPan key="encodeurl" tab="图片Url转Base64">
                 <ImgUrlToBase64 />
             </TabPan>
+            <TabPan key="encodeurl" tab="Gif分割">
+                <ImgUrlToBase64 />
+            </TabPan>
             <!-- <TabPan key="decode" tab="Base64转图片">
                 <Base64ToImage />
             </TabPan> -->

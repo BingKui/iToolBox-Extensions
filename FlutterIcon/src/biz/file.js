@@ -14,7 +14,8 @@ export const dealJsonFile = (fileContent) => {
 };
 
 const dealIconName = (name) => {
-    const arr = name.split('-');
+    const arr = name.replaceAll(' ', '-').split('-');
+
     let result = '';
     for (let i = 0; i < arr.length; i++) {
         result += firstToUpper(arr[i]);
